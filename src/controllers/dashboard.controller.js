@@ -71,9 +71,10 @@ const getChannelStats = asyncHandler(async (req, res) => {
         subscriberCount: 1,
         videoUploadCount: 1,
         totalLikesOnChannel: 1,
-        "videoUploads.title": 1,
-        "videoUploads.thumbnail": 1,
-        "videoUploads.likesCount": 1,
+        videoUploads:1
+        // "videoUploads.title": 1,
+        // "videoUploads.thumbnail": 1,
+        // "videoUploads.likesCount": 1,
         
       },
     },

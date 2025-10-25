@@ -1,5 +1,5 @@
 {
-  "name": "chai_aur_backend",
+  "name": "videotube",
   "version": "1.0.0",
   "description": "a backend Project",
   "main": "index.js",
@@ -9,8 +9,7 @@
   },
   "keywords": [
     "javascript",
-    "backend",
-    "chai"
+    "backend"
   ],
   "author": "Prajwal",
   "license": "ISC",
