@@ -25,6 +25,7 @@ import likeRoute from "./routes/like.routes.js"
 import playlistRoute from "./routes/playlist.routes.js"
 import subscriptionRouter from "./routes/subscription.routes.js"
 import dashboardRouter from "./routes/dashboard.routes.js"
+import tweetRouter from "./routes/tweet.routes.js"
 // route declaration
 app.use('/api/v1/users',userRoute)
 // http://localhost:4000/api/v1/users
@@ -35,4 +36,5 @@ app.use('/api/v1/like',likeRoute)
 app.use('/api/v1/playlist',playlistRoute)
 app.use("/api/v1/subscriptions", subscriptionRouter)
 app.use("/api/v1/dashboard", dashboardRouter)
+app.use("/api/v1/tweet",tweetRouter)
 export {app}

@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 import { Tweet } from "../models/tweet.module.js";
 import { ApiError } from "../utils/apierror.js";
 import { ApiResponse } from "../utils/apiresponse.js";
@@ -71,23 +71,18 @@ const deleteTweet = asyncHandler(async (req, res) => {
 });
 
 const getUserTweets = asyncHandler(async (req, res) => {
-    const usertweets = Tweet.aggregate([
+    const usertweets = await Tweet.aggregate([
       {
         $match:{
           owner:new mongoose.Types.ObjectId(req.user._id)
         }
       },
       {
-        lookup:{
+        $lookup:{
           from:"users",
           localField:"owner",
           foreignField:"_id",
           as:"ownerDetails"
-        }
-      },
-      {
-        $addFields:{
-          ownerDetails:{"$first":"$ownerDetails"}
         }
       },
       {
@@ -103,6 +98,6 @@ const getUserTweets = asyncHandler(async (req, res) => {
     ])
     return res
       .status(200)
-      .json(new ApiResponse(200,usertweets,"User Tweets fetched succesfully"))
+      .json(new ApiResponse(200,usertweets || {},"User Tweets fetched succesfully"))
 }) 
 export { createTweet, updateTweet,deleteTweet,getUserTweets };
