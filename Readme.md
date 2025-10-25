@@ -1,60 +1,60 @@
+# 📺 Videotube – A Full-Featured Video Sharing Backend
 
-📺 Videotube – A Full-Featured Video Sharing Backend
-🚀 Overview
+## 🚀 Overview
+**Videotube** is a complete backend API inspired by platforms like **YouTube**.  
+It allows users to upload, like, comment, and manage videos — all powered by **Node.js**, **Express**, and **MongoDB**.  
+The project follows a clean **MVC architecture** and includes robust **authentication**, **aggregation analytics**, and **cloud media storage** with **Cloudinary**.
 
-Videotube is a complete backend API inspired by platforms like YouTube.
-It allows users to upload, like, comment, and manage videos — all powered by Node.js, Express, and MongoDB.
-The project follows a clean MVC architecture and includes robust authentication, aggregation analytics, and cloud media storage with Cloudinary.
+---
 
-🧩 Features
-👤 User System
+## 🧩 Features
 
-Register, login, logout with JWT authentication
+### 👤 User System
+- Register, login, logout with **JWT authentication**
+- Profile update and avatar upload
+- Channel details and statistics
 
-Profile update and avatar upload
+### 📹 Videos
+- Upload, update, delete, and fetch videos
+- Publish/unpublish control
+- Cloud storage using **Cloudinary**
 
-Channel details and statistics
+### 💬 Comments
+- Add, update, and delete comments
+- Nested lookups for comment counts and user details
 
-📹 Videos
+### ❤️ Likes & Subscriptions
+- Like/unlike videos, comments, and tweets
+- Subscribe/unsubscribe to channels
+- Subscriber and subscription count aggregation
 
-Upload, update, delete, and fetch videos
+### 🎞️ Playlists
+- Create, update, and delete playlists
+- Add/remove videos from playlists
 
-Publish/unpublish control
+### 📊 Dashboard
+- Aggregated stats for user’s uploaded videos
+- Total likes, comments, and subscribers using **MongoDB’s `$lookup`** and **`$group`**
 
-Cloud storage using Cloudinary
+---
 
-💬 Comments
+## 🧠 Tech Stack
 
-Add, update, and delete comments
+| Layer | Technology |
+|-------|-------------|
+| Runtime | Node.js |
+| Framework | Express.js |
+| Database | MongoDB + Mongoose |
+| Authentication | JWT (JSON Web Token) |
+| Cloud Storage | Cloudinary |
+| API Testing | Postman |
+| Developer Tools | Nodemon, Prettier |
 
-Nested lookups for comment counts and user details
+---
 
-❤️ Likes & Subscriptions
+## ⚙️ Setup Instructions
 
-Like/unlike videos, comments, and tweets
-
-Subscribe/unsubscribe to channels
-
-Subscriber and subscription count aggregation
-
-🎞️ Playlists
-
-Create, update, and delete playlists
-
-Add/remove videos from playlists
-
-📊 Dashboard
-
-Aggregated stats for user’s uploaded videos
-
-Total likes, comments, and subscribers using MongoDB’s $lookup and $group
-
-🧠 Tech Stack
-Layer	Technology
-Runtime	Node.js
-Framework	Express.js
-Database	MongoDB + Mongoose
-Authentication	JWT (JSON Web Token)
-Cloud Storage	Cloudinary
-Testing / API Client	Postman
-Dev Tools	Nodemon, Prettier
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Prajwalssajp/videotube.git
+   cd videotube
