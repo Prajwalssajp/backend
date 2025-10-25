@@ -52,9 +52,3 @@ The project follows a clean **MVC architecture** and includes robust **authentic
 
 ---
 
-## ⚙️ Setup Instructions
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Prajwalssajp/videotube.git
-   cd videotube
